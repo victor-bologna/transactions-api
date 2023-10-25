@@ -1,0 +1,130 @@
+{
+  "uuid": "e698604b-dc1f-43dd-ac2b-ac44110f26fa",
+  "lastMigration": 28,
+  "name": "Transaction API",
+  "endpointPrefix": "",
+  "latency": 0,
+  "port": 8081,
+  "hostname": "",
+  "folders": [],
+  "routes": [
+    {
+      "uuid": "0e783075-f3df-44c0-a956-20c2f4c2b318",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "v3/8fafdd68-a090-496f-8c9a-3442cf30dae6",
+      "responses": [
+        {
+          "uuid": "38d27da5-f9e1-41c6-9aa7-f2e847c7c242",
+          "body": "{\n  \"message\": \"Autorizado\"\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id"
+        },
+        {
+          "uuid": "3d13a59a-75d3-488b-b896-8f1229ce5bef",
+          "body": "{\n  \"message\": \"Não autorizado\"\n}",
+          "latency": 0,
+          "statusCode": 401,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id"
+        }
+      ],
+      "enabled": true,
+      "responseMode": "RANDOM"
+    },
+    {
+      "uuid": "6c3991c3-c123-4631-98c9-f973d7863111",
+      "type": "http",
+      "documentation": "",
+      "method": "post",
+      "endpoint": "notify",
+      "responses": [
+        {
+          "uuid": "08123f10-530d-43d5-862f-3703410ecc09",
+          "body": "{\n  \"message\": \"Recebido com sucesso\"\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id"
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    }
+  ],
+  "rootChildren": [
+    {
+      "type": "route",
+      "uuid": "0e783075-f3df-44c0-a956-20c2f4c2b318"
+    },
+    {
+      "type": "route",
+      "uuid": "6c3991c3-c123-4631-98c9-f973d7863111"
+    }
+  ],
+  "proxyMode": false,
+  "proxyHost": "",
+  "proxyRemovePrefix": false,
+  "tlsOptions": {
+    "enabled": false,
+    "type": "CERT",
+    "pfxPath": "",
+    "certPath": "",
+    "keyPath": "",
+    "caPath": "",
+    "passphrase": ""
+  },
+  "cors": true,
+  "headers": [
+    {
+      "key": "Content-Type",
+      "value": "application/json"
+    }
+  ],
+  "proxyReqHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "proxyResHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "data": []
+}
