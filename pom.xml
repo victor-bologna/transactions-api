@@ -8,11 +8,11 @@
 		<version>3.1.5</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.desafiopicpay</groupId>
-	<artifactId>desafiopicpay</artifactId>
+	<groupId>com.transactions.api</groupId>
+	<artifactId>transactionsapi</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>desafiopicpay</name>
-	<description>Projeto para vaga de BackEnd PicPay</description>
+	<name>transactions-api</name>
+	<description>Transactions API</description>
 	<properties>
 		<java.version>17</java.version>
 	</properties>
