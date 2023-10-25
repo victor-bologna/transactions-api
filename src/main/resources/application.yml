@@ -11,3 +11,10 @@ spring:
         jdbc:
           lob:
             non_contextual_creation: true
+transaction:
+  validation:
+    url: "http://localhost:8081/v3/8fafdd68-a090-496f-8c9a-3442cf30dae6"
+
+notification:
+  email:
+    url: "http://localhost:8081/notify"
