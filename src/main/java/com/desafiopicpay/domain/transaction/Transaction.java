@@ -10,20 +10,24 @@ import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity(name = "transactions")
 @Table(name = "transactions")
-public record Transaction (
+@Data
+@AllArgsConstructor
+public class Transaction {
         @Id
         @GeneratedValue(strategy = GenerationType.IDENTITY)
-        Long id,
-        BigDecimal amount,
+        Long id;
+        BigDecimal amount;
         @ManyToOne
         @JoinColumn(name = "sender_id")
-        User sender,
+        User sender;
         @ManyToOne
         @JoinColumn(name = "receiver_id")
-        User receiver,
-        LocalDateTime timestamp) {
-
+        User receiver;
+        LocalDateTime timestamp;
 }
